@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "dbf3c5fa-9f53-445d-a615-c2bf6fefa52b",
+		"name": "Courier Tracking API",
+		"description": "Collection for testing Courier Tracking Spring Boot API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9106743"
+	},
+	"item": [
+		{
+			"name": "Post Courier Location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"courierId\": \"courier_123\",\n    \"latitude\": 40.9632463,\n    \"longitude\": 29.0630908,\n    \"timestamp\": \"2025-04-20T15:30:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Courier Total Distance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/locations/distance/courier_123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"distance",
+						"courier_123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Store Nearby Couriers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/locations/nearby/Caddebostan MMM Migros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"nearby",
+						"Caddebostan MMM Migros"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

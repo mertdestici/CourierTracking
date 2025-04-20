@@ -120,6 +120,6 @@ public class CourierLocationServiceTest {
 
         // Then
         assertThat(nearby).hasSize(1);
-        assertThat(nearby.get(0).getCourierId()).isEqualTo("courier_123");
+        assertThat(nearby.get(0).getCourierId()).isEqualTo("courier_001");
     }
 }

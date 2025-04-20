@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -20,7 +21,7 @@ public class StoreRegistry {
         try {
             ObjectMapper mapper = new ObjectMapper();
             InputStream resourceAsStream = getClass().getClassLoader().getResourceAsStream("stores.json");
-            this.stores = List.of(mapper.readValue(resourceAsStream, Store[].class));
+            this.stores = new ArrayList<>(List.of(mapper.readValue(resourceAsStream, Store[].class)));
         } catch (IOException e) {
             throw new RuntimeException("Failed to load stores", e);
         }
