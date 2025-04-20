@@ -36,7 +36,12 @@ git clone https://github.com/mertdestici/CourierTracking.git
 cd courier-tracking
 ```
 
-### 2. Run the application
+### 2. Build the project
+```bash
+./gradlew build
+```
+
+### 3. Run the application
 
 ### ✅ Option 1: Run via Gradle
 ```bash
@@ -45,12 +50,11 @@ cd courier-tracking
 
 ### 🐳 Option 2: Run via Docker (Optional)
 ```bash
-./gradlew build
 docker build -t courier-tracking-api .
 docker run -p 8080:8080 courier-tracking-api
 ```
 
-### 3. Test endpoints using Postman or curl
+### 4. Test endpoints using Postman or curl
 [Courier Tracking API.postman_collection.json](Courier%20Tracking%20API.postman_collection.json)
 
 #### POST Location

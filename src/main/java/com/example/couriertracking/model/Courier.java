@@ -21,9 +21,9 @@ public class Courier {
     private String courierId;
 
     @OneToMany(mappedBy = "courier", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CourierLocation> locations = new ArrayList<>();
+    private List<CourierLocation> locations;
 
     @OneToMany(mappedBy = "courier", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CourierStoreEntry> entries = new ArrayList<>();
+    private List<CourierStoreEntry> entries;
 }
 
